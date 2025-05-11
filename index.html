@@ -3,9 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 131</title>
+    <title>WDD 131 – Dynamic Web Fundamentals – Ulises Tzaj </title>
+    <meta name="author" content="Ulises Tzaj">
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Ulises Tzaj ">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/base.css">
+    <script src = "scripts/getdates.js" defer></script>
+    
+
 </head>
 <body>
-    <h1>WDD 131 - Ulises</h1>
+    <header>
+        <h1>WDD 131: Dynamic Web Fundamentals - Ulises Tzaj</h1>    
+        <nav>
+            <ul>
+                <li><a href="https://www.linkedin.com/">LinkedIn</a></li>
+                <li><a href="https://byupw.instructure.com/">Canvas</a></li>
+                <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/moro/10?lang=spa&id=p4#p4">Scripture</a></li>
+                <li><a href="projects.html">Final Project</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="card card-about">
+            <h2>About Me</h2>
+            <div class="row about">
+                <div class="text">
+                    <p>My name is Ulises, and I was born in Sololá, Guatemala.
+                        I am currently a student at BYU-Idaho Online, and I also work
+                        in the IT department of a telephone company. I love going to
+                        the gym, playing video games, and spending time with my family
+                        and friends.
+                    </p>
+                </div>
+                <div class="image">
+                    <img src="images/ulises.jpg" alt="Ulises Tzaj">
+                </div>
+            </div>
+        
+            <h2>Guatemala</h2>
+            <div class="row guatemala">
+                <div class="image">
+                    <img src="images/guatemala.jpg" alt="Flag of Guatemala">
+                </div>
+                <div class="text">
+                    <p>Guatemala is a beautiful country located in Central America,
+                        known for its rich culture, stunning landscapes, and ancient Mayan heritage.
+                        It is home to volcanoes, lush rainforests, and historic ruins like Tikal.
+                        Guatemala's diverse population blends indigenous traditions with Spanish
+                        influence, offering vibrant festivals, colorful textiles, and delicious cuisine.
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="card resource">
+            <h2>Web Dev Resource</h2>
+            <ul>
+                <li><a href="https://www.w3schools.com/">W3Schools</a></li>
+                <li><a href="https://dev.to/">Dev.to Community</a></li>
+                <li><a href="https://css-tricks.com/">CSS Tricks</a></li>
+                <li><a href="https://www.udemy.com/">Udemy</a></li>
+                <li><a href="https://www.smashingmagazine.com/">Smashing Magazine</a></li>
+                <li><a href="https://placehold.co/">Image Placeholder</a></li>
+
+            </ul>
+        </section>
+        
+    </main>
+    <footer>
+        <p>©2025 🌵 Ulises Antonio Tzaj 🌵 Guatemala</p>
+        <p>Last Updated: <span id="last-updated"></span></p>
+
+    </footer>
 </body>
 </html>
