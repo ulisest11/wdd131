@@ -1,124 +1,110 @@
 :root {
     --primary-color: #4997D0;
-    /* Azul de la bandera de Guatemala */
-    --secondary-color: #FFFFFF;
-    /* Blanco */
+    /* Azul bandera GT */
+    --secondary-color: rgba(255, 255, 255, 0.9);
+    /* Blanco con transparencia */
     --accent-color: #1D5C1F;
-    /* Verde similar al de Petén */
-    --text-color: #333333;
-    --background-color: #f5f5f5;
-    --border-color: #ddd;
+    /* Verde Petén */
+    --text-color: #333;
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* Reset y estilos base */
 body {
     font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
+    margin: 0;
+    padding: 0;
     color: var(--text-color);
-    background-color: var(--background-color);
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
 }
 
 header {
-    padding: 1rem;
-    background-color: #1D5C1F;
-    /* Verde Petén */
+    background-color: var(--accent-color);
     color: white;
-    border-radius: 8px;
-    margin-bottom: 2rem;
+    padding: 1.5rem;
+    text-align: center;
 }
 
 h1 {
-    font-size: 2.5rem;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-}
-h2 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.8rem;
-    color: var(--primary-color);
-    margin-bottom: 15px;
-    position: relative;
+    font-size: 2.5rem;
+    margin: 0;
 }
 
-picture,
-img {
-    display: block;
+/* Contenedor hero (imagen + boxes) */
+.hero-container {
+    position: relative;
+    width: 100%;
+    margin: 0;
+}
+
+.hero-image img {
     width: 100%;
     height: auto;
-    margin-bottom: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: block;
 }
 
-.data-section,
-.weather-section {
+/* Boxes superpuestos */
+.data-box,
+.weather-box {
+    position: absolute;
+    background-color: var(--secondary-color);
     padding: 1.5rem;
-    margin-bottom: 2rem;
-    border-left: 5px solid #4997D0;
-    /* Borde azul */
-}
-.data-grid,
-.weather-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 15px;
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+    width: 45%;
+    /* Tamaño similar al wireframe */
 }
 
-.weather-icon {
+.data-box {
+    top: 50%;
+    left: 2%;
+    transform: translateY(-50%);
+}
+
+.weather-box {
+    top: 50%;
+    right: 2%;
+    transform: translateY(-50%);
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
     font-size: 1.5rem;
-    vertical-align: middle;
 }
 
 .mobile-weather-icon {
-    width: 70px;
-    height: 70px;
-    margin: 0 auto;
-    display: block;
+    display: none;
 }
+
+/* Footer */
 footer {
+    background-color: var(--accent-color);
+    color: white;
     text-align: center;
-    padding: 20px;
-    margin-top: 30px;
-    color: var(--text-color);
-    font-size: 0.9rem;
+    padding: 1rem;
+    margin-top: 0;
 }
 
-/* Media Query para pantallas más grandes */
-@media (min-width: 768px) {
-    h1 {
-        font-size: 3rem;
-    }
+/* Responsive: Móvil */
+@media (max-width: 767px) {
 
-    .weather-icon {
-        display: inline-block;
-        margin-left: 10px;
+    .data-box,
+    .weather-box {
+        position: static;
+        width: 90%;
+        margin: 1rem auto;
+        transform: none;
     }
 
     .mobile-weather-icon {
+        display: block;
+        width: 50px;
+        margin: 0.5rem auto;
+    }
+
+    .weather-icon {
         display: none;
-    }
-
-    .data-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 767px) {
-
-    picture,
-    img {
-        max-height: 300px;
-        object-fit: cover;
-    }
-
-    .data-grid {
-        grid-template-columns: 1fr;
     }
 }

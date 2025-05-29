@@ -9,12 +9,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&family=Roboto:wght@400;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles/place.css">
     <script src="scripts/place.js" defer></script>
 </head>
-
 
 <body>
     <header>
@@ -22,36 +21,39 @@
     </header>
 
     <main>
-        <picture>
-            <source media="(min-width: 768px)" srcset="images/peten-desktop.webp">
-            <source media="(max-width: 767px)" srcset="images/peten-mobile.webp">
-            <img src="images/peten-desktop.webp" alt="Vista panorámica de Petén, Guatemala">
-        </picture>
+        <!-- Imagen de fondo con boxes superpuestos -->
+        <div class="hero-container">
+            <picture class="hero-image">
+                <source media="(min-width: 768px)" srcset="images/peten-desktop.webp">
+                <source media="(max-width: 767px)" srcset="images/peten-mobile.webp">
+                <img src="images/peten-desktop.webp" alt="Vista de la selva de Petén, Guatemala">
+            </picture>
 
-        <section class="data-section">
-            <h2>Data</h2>
-            <div class="data-grid">
-                <p><strong>Area:</strong> 35,854 sq km</p>
-                <p><strong>Population:</strong> 595,548</p>
-                <p><strong>Capital:</strong> Flores</p>
-                <p><strong>Languages:</strong> Spanish, Itza'</p>
-                <p><strong>Currency:</strong> Guatemalan Quetzal</p>
-                <p><strong>Time Zone:</strong> UTC-6</p>
-                <p><strong>Calling Code:</strong> +502</p>
-                <p><strong>Internet TLD:</strong> .gt</p>
+            <div class="data-box">
+                <h2>Data</h2>
+                <div class="data-content">
+                    <p><strong>Area:</strong> 35,854 sq km</p>
+                    <p><strong>Population:</strong> 595,548</p>
+                    <p><strong>Capital:</strong> Flores</p>
+                    <p><strong>Languages:</strong> Spanish, Itza'</p>
+                    <p><strong>Currency:</strong> Guatemalan Quetzal</p>
+                    <p><strong>Time Zone:</strong> UTC-6</p>
+                    <p><strong>Calling Code:</strong> +502</p>
+                    <p><strong>Internet TLD:</strong> .gt</p>
+                </div>
             </div>
-        </section>
 
-        <section class="weather-section">
-            <h2>Weather <span class="weather-icon" aria-hidden="true">⛅</span></h2>
-            <div class="weather-grid">
-                <p><strong>Temperature:</strong> <span id="temperature">28</span> °C</p>
-                <p><strong>Conditions:</strong> Partly Cloudy</p>
-                <p><strong>Wind:</strong> <span id="wind-speed">12</span> km/h</p>
-                <p><strong>Wind Chill:</strong> <span id="wind-chill">N/A</span></p>
+            <div class="weather-box">
+                <h2>Weather ⛅</h2>
+                <div class="weather-content">
+                    <p><strong>Temperature:</strong> <span id="temperature">28</span> °C</p>
+                    <p><strong>Conditions:</strong> Partly Cloudy</p>
+                    <p><strong>Wind:</strong> <span id="wind-speed">12</span> km/h</p>
+                    <p><strong>Wind Chill:</strong> <span id="wind-chill">N/A</span></p>
+                </div>
+                <img src="images/weather.svg" alt="Icono del clima" class="mobile-weather-icon">
             </div>
-            <img src="images/weather.svg" alt="Ícono de clima parcialmente nublado" class="mobile-weather-icon">
-        </section>
+        </div>
     </main>
 
     <footer>
