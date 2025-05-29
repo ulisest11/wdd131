@@ -27,17 +27,18 @@ body {
 }
 
 header {
-    text-align: center;
-    margin-bottom: 20px;
+    padding: 1rem;
+    background-color: #1D5C1F;
+    /* Verde Petén */
+    color: white;
+    border-radius: 8px;
+    margin-bottom: 2rem;
 }
 
 h1 {
-    font-family: 'Montserrat', sans-serif;
     font-size: 2.5rem;
-    color: var(--accent-color);
-    margin-bottom: 10px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
-
 h2 {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.8rem;
@@ -58,13 +59,11 @@ img {
 
 .data-section,
 .weather-section {
-    background-color: var(--secondary-color);
-    padding: 20px;
-    border-radius: 8px;
-    margin-bottom: 30px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-left: 5px solid #4997D0;
+    /* Borde azul */
 }
-
 .data-grid,
 .weather-grid {
     display: grid;
@@ -73,16 +72,16 @@ img {
 }
 
 .weather-icon {
-    display: none;
+    font-size: 1.5rem;
+    vertical-align: middle;
 }
 
 .mobile-weather-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto;
     display: block;
-    width: 50px;
-    height: 50px;
-    margin: 15px auto 0;
 }
-
 footer {
     text-align: center;
     padding: 20px;
@@ -111,8 +110,15 @@ footer {
     }
 }
 
-@media (min-width: 1024px) {
+@media (max-width: 767px) {
+
+    picture,
+    img {
+        max-height: 300px;
+        object-fit: cover;
+    }
+
     .data-grid {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: 1fr;
     }
 }
