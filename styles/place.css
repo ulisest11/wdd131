@@ -1,15 +1,12 @@
 :root {
     --primary-color: #4997D0;
-    /* Azul bandera GT */
     --secondary-color: rgba(255, 255, 255, 0.9);
-    /* Blanco con transparencia */
     --accent-color: #1D5C1F;
-    /* Verde Petén */
     --text-color: #333;
     --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Reset y estilos base */
+
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -30,7 +27,7 @@ h1 {
     margin: 0;
 }
 
-/* Contenedor hero (imagen + boxes) */
+
 .hero-container {
     position: relative;
     width: 100%;
@@ -43,7 +40,7 @@ h1 {
     display: block;
 }
 
-/* Boxes superpuestos */
+
 .data-box,
 .weather-box {
     position: absolute;
@@ -52,19 +49,29 @@ h1 {
     border-radius: 8px;
     box-shadow: var(--box-shadow);
     width: 45%;
-    /* Tamaño similar al wireframe */
+
 }
 
 .data-box {
-    top: 50%;
+    position: absolute;
+    background-color: var(--secondary-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+    width: 45%;
+    top: 30%;
     left: 2%;
-    transform: translateY(-50%);
 }
 
 .weather-box {
-    top: 50%;
+    position: absolute;
+    background-color: var(--secondary-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+    width: 45%;
+    top: 60%;
     right: 2%;
-    transform: translateY(-50%);
 }
 
 h2 {
@@ -78,7 +85,7 @@ h2 {
     display: none;
 }
 
-/* Footer */
+
 footer {
     background-color: var(--accent-color);
     color: white;
@@ -87,7 +94,7 @@ footer {
     margin-top: 0;
 }
 
-/* Responsive: Móvil */
+
 @media (max-width: 767px) {
 
     .data-box,
