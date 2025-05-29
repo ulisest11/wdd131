@@ -1,37 +1,31 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Petén Guatemala</title>
+    <title>Petén, Guatemala</title>
     <meta name="author" content="Ulises Tzaj">
-    <meta name="description" content="Place - Ulises Tzaj">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&family=Roboto&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&family=Roboto:wght@400;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles/place.css">
-    <link rel="stylesheet" href="styles/place-large.css">
     <script src="scripts/place.js" defer></script>
 </head>
 
-
 <body>
     <header>
-        <h1>Petén Guatemala</h1>
-    </header>
-    <main>
         <picture>
-            <!-- Versión móvil (600px) -->
             <source media="(max-width: 600px)" srcset="images/peten-mobile.webp">
-            <!-- Versión desktop (1200px) -->
             <source media="(min-width: 601px)" srcset="images/peten-desktop.webp">
-            <!-- Fallback para navegadores antiguos -->
-            <img src="images/peten-desktop.webp" alt="Selva de Petén, Guatemala, con ruinas mayas y vegetación exuberante"
-                class="main-image">
+            <img src="images/peten-desktop.webp" alt="Paisaje de Petén, Guatemala" class="hero-image">
         </picture>
+        <h1>Petén</h1>
+    </header>
 
+    <main>
         <section class="data-section">
             <h2>Data</h2>
             <div class="data-grid">
@@ -41,7 +35,7 @@
                 </div>
                 <div class="data-item">
                     <span class="data-label">Population:</span>
-                    <span class="data-value">595,548</span>
+                    <span class="data-value">600,000</span>
                 </div>
                 <div class="data-item">
                     <span class="data-label">Capital:</span>
@@ -49,11 +43,11 @@
                 </div>
                 <div class="data-item">
                     <span class="data-label">Languages:</span>
-                    <span class="data-value">Spanish, Q'eqchi', Itza'</span>
+                    <span class="data-value">Spanish, Mayan languages</span>
                 </div>
                 <div class="data-item">
                     <span class="data-label">Currency:</span>
-                    <span class="data-value">Guatemalan Quetzal (GTQ)</span>
+                    <span class="data-value">Guatemalan Quetzal</span>
                 </div>
                 <div class="data-item">
                     <span class="data-label">Time Zone:</span>
@@ -72,34 +66,31 @@
 
         <section class="weather-section">
             <h2>Weather</h2>
-            <div class="weather-content">
-                <div class="weather-icon-mobile">
-                    <img src="images/weather.svg" alt="Weather Icon">
+            <div class="weather-data">
+                <div class="weather-item">
+                    <span class="weather-label">Temperature:</span>
+                    <span class="weather-value" id="temperature">25 °C</span>
                 </div>
-                <div class="weather-data">
-                    <div class="weather-item">
-                        <span class="weather-label">Temperature:</span>
-                        <span class="weather-value" id="temperature">24 °C</span>
-                    </div>
-                    <div class="weather-item">
-                        <span class="weather-label">Conditions:</span>
-                        <span class="weather-value">Partly Cloudy</span>
-                    </div>
-                    <div class="weather-item">
-                        <span class="weather-label">Wind:</span>
-                        <span class="weather-value" id="wind-speed">8 km/h</span>
-                    </div>
-                    <div class="weather-item">
-                        <span class="weather-label">Wind Chill:</span>
-                        <span class="weather-value" id="wind-chill">N/A</span>
-                    </div>
+                <div class="weather-item">
+                    <span class="weather-label">Conditions:</span>
+                    <span class="weather-value">Partly Cloudy</span>
+                </div>
+                <div class="weather-item">
+                    <span class="weather-label">Wind:</span>
+                    <span class="weather-value" id="wind-speed">8 km/h</span>
+                </div>
+                <div class="weather-item">
+                    <span class="weather-label">Wind Chill:</span>
+                    <span class="weather-value" id="wind-chill">N/A</span>
                 </div>
             </div>
+            <img src="weather.svg" alt="Weather icon" class="weather-icon-mobile">
         </section>
     </main>
+
     <footer>
-        <p>©<span id="current-year"></span> 🌵 Ulises Antonio Tzaj 🌵 Guatemala</p>
-        <p>Last Updated: <span id="last-updated"></span></p>
+        <p>©<span id="year"></span> 🌴 Ulises Tzaj 🌴 Guatemala</p>
+        <p id="last-modified"></p>
     </footer>
 </body>
 

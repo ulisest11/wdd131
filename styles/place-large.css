@@ -1,14 +1,6 @@
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
     h1 {
         font-size: 2.5rem;
-    }
-
-    h2 {
-        font-size: 1.8rem;
-    }
-
-    h2::after {
-        content: " ⛅";
     }
 
     .data-grid {
@@ -20,17 +12,12 @@
         align-items: center;
     }
 
-    .weather-icon-mobile {
-        display: none;
-    }
-
-    .weather-data {
-        grid-template-columns: repeat(2, 1fr);
-        flex-grow: 1;
+    h2::after {
+        content: " ⛅";
     }
 }
 
-@media screen and (min-width: 1024px) {
+@media (min-width: 1024px) {
     .data-grid {
         grid-template-columns: repeat(4, 1fr);
     }
