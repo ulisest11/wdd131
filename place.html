@@ -17,74 +17,39 @@
 
 <body>
     <header>
-        <picture>
-            <source media="(max-width: 600px)" srcset="images/peten-mobile.webp">
-            <source media="(min-width: 601px)" srcset="images/peten-desktop.webp">
-            <img src="images/peten-desktop.webp" alt="Paisaje de Petén, Guatemala" class="hero-image">
-        </picture>
         <h1>Petén</h1>
     </header>
 
     <main>
+        <picture>
+            <source media="(min-width: 768px)" srcset="images/peten-desktop.webp">
+            <source media="(max-width: 767px)" srcset="images/peten-mobile.webp">
+            <img src="images/peten-desktop.webp" alt="Vista panorámica de Petén, Guatemala">
+        </picture>
+
         <section class="data-section">
             <h2>Data</h2>
             <div class="data-grid">
-                <div class="data-item">
-                    <span class="data-label">Area:</span>
-                    <span class="data-value">35,854 sq km</span>
-                </div>
-                <div class="data-item">
-                    <span class="data-label">Population:</span>
-                    <span class="data-value">600,000</span>
-                </div>
-                <div class="data-item">
-                    <span class="data-label">Capital:</span>
-                    <span class="data-value">Flores</span>
-                </div>
-                <div class="data-item">
-                    <span class="data-label">Languages:</span>
-                    <span class="data-value">Spanish, Mayan languages</span>
-                </div>
-                <div class="data-item">
-                    <span class="data-label">Currency:</span>
-                    <span class="data-value">Guatemalan Quetzal</span>
-                </div>
-                <div class="data-item">
-                    <span class="data-label">Time Zone:</span>
-                    <span class="data-value">UTC-6</span>
-                </div>
-                <div class="data-item">
-                    <span class="data-label">Calling Code:</span>
-                    <span class="data-value">+502</span>
-                </div>
-                <div class="data-item">
-                    <span class="data-label">Internet TLD:</span>
-                    <span class="data-value">.gt</span>
-                </div>
+                <p><strong>Area:</strong> 35,854 sq km</p>
+                <p><strong>Population:</strong> 595,548</p>
+                <p><strong>Capital:</strong> Flores</p>
+                <p><strong>Languages:</strong> Spanish, Itza'</p>
+                <p><strong>Currency:</strong> Guatemalan Quetzal</p>
+                <p><strong>Time Zone:</strong> UTC-6</p>
+                <p><strong>Calling Code:</strong> +502</p>
+                <p><strong>Internet TLD:</strong> .gt</p>
             </div>
         </section>
 
         <section class="weather-section">
-            <h2>Weather</h2>
-            <div class="weather-data">
-                <div class="weather-item">
-                    <span class="weather-label">Temperature:</span>
-                    <span class="weather-value" id="temperature">25 °C</span>
-                </div>
-                <div class="weather-item">
-                    <span class="weather-label">Conditions:</span>
-                    <span class="weather-value">Partly Cloudy</span>
-                </div>
-                <div class="weather-item">
-                    <span class="weather-label">Wind:</span>
-                    <span class="weather-value" id="wind-speed">8 km/h</span>
-                </div>
-                <div class="weather-item">
-                    <span class="weather-label">Wind Chill:</span>
-                    <span class="weather-value" id="wind-chill">N/A</span>
-                </div>
+            <h2>Weather <span class="weather-icon">⛅</span></h2>
+            <div class="weather-grid">
+                <p><strong>Temperature:</strong> <span id="temperature">28</span> °C</p>
+                <p><strong>Conditions:</strong> Partly Cloudy</p>
+                <p><strong>Wind:</strong> <span id="wind-speed">12</span> km/h</p>
+                <p><strong>Wind Chill:</strong> <span id="wind-chill">N/A</span></p>
             </div>
-            <img src="weather.svg" alt="Weather icon" class="weather-icon-mobile">
+            <img src="images/weather.svg" alt="Icono del clima" class="mobile-weather-icon">
         </section>
     </main>
 

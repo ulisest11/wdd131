@@ -3,13 +3,11 @@
     /* Azul de la bandera de Guatemala */
     --secondary-color: #FFFFFF;
     /* Blanco */
-    --accent-color: #3A7D44;
-    /* Verde selva */
+    --accent-color: #1D5C1F;
+    /* Verde similar al de Petén */
     --text-color: #333333;
     --background-color: #f5f5f5;
     --border-color: #ddd;
-    --heading-font: 'Montserrat', sans-serif;
-    --body-font: 'Roboto', sans-serif;
 }
 
 * {
@@ -19,135 +17,102 @@
 }
 
 body {
-    font-family: var(--body-font);
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
     color: var(--text-color);
     background-color: var(--background-color);
-    line-height: 1.6;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 header {
-    position: relative;
     text-align: center;
-    margin-bottom: 2rem;
-}
-
-.hero-image {
-    width: 100%;
-    height: auto;
-    max-height: 400px;
-    object-fit: cover;
+    margin-bottom: 20px;
 }
 
 h1 {
-    position: absolute;
-    bottom: 20px;
-    left: 0;
-    right: 0;
-    color: var(--secondary-color);
-    font-family: var(--heading-font);
-    font-size: 3rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    margin-bottom: 10px;
 }
 
 h2 {
-    font-family: var(--heading-font);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
     color: var(--primary-color);
-    margin-bottom: 1rem;
+    margin-bottom: 15px;
     position: relative;
-    padding-bottom: 0.5rem;
 }
 
-h2::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 50px;
-    height: 3px;
-    background-color: var(--accent-color);
-}
-
-main {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
-    display: grid;
-    gap: 2rem;
+picture,
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .data-section,
 .weather-section {
     background-color: var(--secondary-color);
-    padding: 1.5rem;
+    padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.data-grid {
+.data-grid,
+.weather-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 1rem;
+    gap: 15px;
 }
 
-.data-item,
-.weather-item {
-    display: flex;
-    justify-content: space-between;
-    padding: 0.5rem 0;
-    border-bottom: 1px solid var(--border-color);
+.weather-icon {
+    display: none;
 }
 
-.data-label,
-.weather-label {
-    font-weight: bold;
-    color: var(--primary-color);
-}
-
-.weather-icon-mobile {
+.mobile-weather-icon {
     display: block;
     width: 50px;
     height: 50px;
-    margin: 1rem auto 0;
+    margin: 15px auto 0;
 }
 
-
-/* (Todos los estilos anteriores se mantienen igual) */
-
-/* Añadir estos estilos al final del archivo */
 footer {
     text-align: center;
-    padding: 2rem 1rem;
-    margin-top: 2rem;
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    font-family: var(--heading-font);
+    padding: 20px;
+    margin-top: 30px;
+    color: var(--text-color);
+    font-size: 0.9rem;
 }
 
-footer p {
-    margin: 0.5rem 0;
-}
-
-footer span {
-    font-weight: bold;
-}
-
-/* Desktop styles */
+/* Media Query para pantallas más grandes */
 @media (min-width: 768px) {
-    main {
-        grid-template-columns: 2fr 1fr;
-    }
-
     h1 {
-        font-size: 4rem;
+        font-size: 3rem;
     }
 
-    .weather-icon-mobile {
+    .weather-icon {
+        display: inline-block;
+        margin-left: 10px;
+    }
+
+    .mobile-weather-icon {
         display: none;
     }
 
-    .weather-section h2::after {
-        content: "⛅";
-        margin-left: 1rem;
-        font-size: 1.5rem;
+    .data-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .data-grid {
+        grid-template-columns: repeat(4, 1fr);
     }
 }

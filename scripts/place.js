@@ -1,39 +1,32 @@
-// Function to calculate wind chill in Celsius
+// Función para calcular el factor de sensación térmica (wind chill)
 function calculateWindChill(temperature, windSpeed) {
+    // Fórmula para métrica (temperatura en °C y velocidad del viento en km/h)
     return (13.12 + 0.6215 * temperature - 11.37 * Math.pow(windSpeed, 0.16) + 0.3965 * temperature * Math.pow(windSpeed, 0.16)).toFixed(1);
 }
 
-// Function to update wind chill display
+// Función para actualizar el wind chill en la página
 function updateWindChill() {
-    const temperature = 25; // Static value for Petén in °C
-    const windSpeed = 8;   // Static value in km/h
-
+    const temperature = parseFloat(document.getElementById('temperature').textContent);
+    const windSpeed = parseFloat(document.getElementById('wind-speed').textContent);
     const windChillElement = document.getElementById('wind-chill');
 
-    // Check if conditions are met for wind chill calculation
+    // Verificar condiciones para calcular wind chill (<=10°C y >4.8 km/h)
     if (temperature <= 10 && windSpeed > 4.8) {
         const windChill = calculateWindChill(temperature, windSpeed);
         windChillElement.textContent = `${windChill} °C`;
     } else {
-        windChillElement.textContent = "N/A";
+        windChillElement.textContent = 'N/A';
     }
 }
 
-// Function to update footer with current year and last modified date
-function updateFooter() {
-    // Current year
-    document.getElementById('year').textContent = new Date().getFullYear();
+// Actualizar el año en el footer
+document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Last modified date
-    const lastModified = new Date(document.lastModified);
-    document.getElementById('last-modified').textContent = `Last Modification: ${lastModified.toLocaleString()}`;
-}
+// Actualizar la fecha de última modificación
+document.getElementById('last-modified').textContent = `Last Modification: ${document.lastModified}`;
 
-// Initialize when DOM is loaded
-document.addEventListener('DOMContentLoaded', () => {
-    updateWindChill();
-    updateFooter();
-});
+// Llamar a la función para actualizar el wind chill cuando la página cargue
+document.addEventListener('DOMContentLoaded', updateWindChill);
 
 
   
