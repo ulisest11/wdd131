@@ -2,17 +2,17 @@
 <html lang="en-US">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Petén Guatemala</title>
-    <meta name="author" content="Ulises Tzaj" />
-    <meta name="description" content="Place - Ulises Tzaj" />
+    <meta name="author" content="Ulises Tzaj">
+    <meta name="description" content="Place - Ulises Tzaj">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&family=Roboto&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="styles/place.css" />
-    <link rel="stylesheet" href="styles/place-large.css" />
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-large.css">
     <script src="scripts/place.js" defer></script>
 </head>
 
@@ -20,42 +20,84 @@
     <header>
         <h1>Petén Guatemala</h1>
     </header>
-
     <main>
-        <!-- HERO responsive -->
         <picture>
-            <source srcset="images/peten-large.webp" media="(min-width: 768px)">
-            <img src="images/peten.webp" alt="Petén Guatemala" class="main-image">
+            <!-- Versión móvil (600px) -->
+            <source media="(max-width: 600px)" srcset="images/peten-mobile.webp">
+            <!-- Versión desktop (1200px) -->
+            <source media="(min-width: 601px)" srcset="images/peten-desktop.webp">
+            <!-- Fallback para navegadores antiguos -->
+            <img src="images/peten-desktop.webp" alt="Selva de Petén, Guatemala, con ruinas mayas y vegetación exuberante"
+                class="main-image">
         </picture>
 
-        <!-- Data Section -->
-        <section class="data">
+        <section class="data-section">
             <h2>Data</h2>
-            <ul>
-                <li><strong>Area:</strong> 35,854 sq km</li>
-                <li><strong>Population:</strong> ~545,600</li>
-                <li><strong>Capital:</strong> Flores</li>
-                <li><strong>Languages:</strong> Spanish, Q'eqchi', Itza'</li>
-                <li><strong>Currency:</strong> Guatemalan Quetzal</li>
-                <li><strong>Time Zone:</strong> UTC-6</li>
-                <li><strong>Calling Code:</strong> +502</li>
-                <li><strong>Internet TLD:</strong> .gt</li>
-            </ul>
+            <div class="data-grid">
+                <div class="data-item">
+                    <span class="data-label">Area:</span>
+                    <span class="data-value">35,854 sq km</span>
+                </div>
+                <div class="data-item">
+                    <span class="data-label">Population:</span>
+                    <span class="data-value">595,548</span>
+                </div>
+                <div class="data-item">
+                    <span class="data-label">Capital:</span>
+                    <span class="data-value">Flores</span>
+                </div>
+                <div class="data-item">
+                    <span class="data-label">Languages:</span>
+                    <span class="data-value">Spanish, Q'eqchi', Itza'</span>
+                </div>
+                <div class="data-item">
+                    <span class="data-label">Currency:</span>
+                    <span class="data-value">Guatemalan Quetzal (GTQ)</span>
+                </div>
+                <div class="data-item">
+                    <span class="data-label">Time Zone:</span>
+                    <span class="data-value">UTC-6</span>
+                </div>
+                <div class="data-item">
+                    <span class="data-label">Calling Code:</span>
+                    <span class="data-value">+502</span>
+                </div>
+                <div class="data-item">
+                    <span class="data-label">Internet TLD:</span>
+                    <span class="data-value">.gt</span>
+                </div>
+            </div>
         </section>
 
-        <!-- Weather Section -->
-        <section class="weather">
-            <h2>Weather<span class="icon"></span></h2>
-            <p><strong>Temperature:</strong> 30 °C</p>
-            <p><strong>Conditions:</strong> Mostly Sunny</p>
-            <p><strong>Wind:</strong> 6 km/h</p>
-            <p><strong>Wind Chill:</strong> <span id="windchill">N/A</span></p>
-            <img src="images/weather.svg" alt="Weather Icon" class="weather-icon">
+        <section class="weather-section">
+            <h2>Weather</h2>
+            <div class="weather-content">
+                <div class="weather-icon-mobile">
+                    <img src="images/weather.svg" alt="Weather Icon">
+                </div>
+                <div class="weather-data">
+                    <div class="weather-item">
+                        <span class="weather-label">Temperature:</span>
+                        <span class="weather-value" id="temperature">24 °C</span>
+                    </div>
+                    <div class="weather-item">
+                        <span class="weather-label">Conditions:</span>
+                        <span class="weather-value">Partly Cloudy</span>
+                    </div>
+                    <div class="weather-item">
+                        <span class="weather-label">Wind:</span>
+                        <span class="weather-value" id="wind-speed">8 km/h</span>
+                    </div>
+                    <div class="weather-item">
+                        <span class="weather-label">Wind Chill:</span>
+                        <span class="weather-value" id="wind-chill">N/A</span>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
-
     <footer>
-        <p>©2025 🌵 Ulises Antonio Tzaj 🌵 Guatemala</p>
+        <p>©<span id="current-year"></span> 🌵 Ulises Antonio Tzaj 🌵 Guatemala</p>
         <p>Last Updated: <span id="last-updated"></span></p>
     </footer>
 </body>
