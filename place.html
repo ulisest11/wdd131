@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Petén Guatemala</title>
+    <meta name="author" content="Ulises Tzaj" />
+    <meta name="description" content="Place - Ulises Tzaj" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&family=Roboto&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/place.css" />
+    <link rel="stylesheet" href="styles/place-large.css" />
+    <script src="scripts/place.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Petén Guatemala</h1>
+    </header>
+
+    <main>
+        <!-- HERO responsive -->
+        <picture>
+            <source srcset="images/peten-large.webp" media="(min-width: 768px)">
+            <img src="images/peten.webp" alt="Petén Guatemala" class="main-image">
+        </picture>
+
+        <!-- Data Section -->
+        <section class="data">
+            <h2>Data</h2>
+            <ul>
+                <li><strong>Area:</strong> 35,854 sq km</li>
+                <li><strong>Population:</strong> ~545,600</li>
+                <li><strong>Capital:</strong> Flores</li>
+                <li><strong>Languages:</strong> Spanish, Q'eqchi', Itza'</li>
+                <li><strong>Currency:</strong> Guatemalan Quetzal</li>
+                <li><strong>Time Zone:</strong> UTC-6</li>
+                <li><strong>Calling Code:</strong> +502</li>
+                <li><strong>Internet TLD:</strong> .gt</li>
+            </ul>
+        </section>
+
+        <!-- Weather Section -->
+        <section class="weather">
+            <h2>Weather<span class="icon"></span></h2>
+            <p><strong>Temperature:</strong> 30 °C</p>
+            <p><strong>Conditions:</strong> Mostly Sunny</p>
+            <p><strong>Wind:</strong> 6 km/h</p>
+            <p><strong>Wind Chill:</strong> <span id="windchill">N/A</span></p>
+            <img src="images/weather.svg" alt="Weather Icon" class="weather-icon">
+        </section>
+    </main>
+
+    <footer>
+        <p>©2025 🌵 Ulises Antonio Tzaj 🌵 Guatemala</p>
+        <p>Last Updated: <span id="last-updated"></span></p>
+    </footer>
+</body>
+
+</html>
