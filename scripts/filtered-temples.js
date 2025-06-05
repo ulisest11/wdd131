@@ -109,10 +109,10 @@ const temples = [
     }
 ];
 
-// Obtener contenedor principal
+
 const container = document.getElementById("temples-container");
 
-// Función para renderizar templos
+
 function renderTemples(filteredTemples) {
     container.innerHTML = "";
     filteredTemples.forEach(t => {
@@ -128,10 +128,10 @@ function renderTemples(filteredTemples) {
     });
 }
 
-// Render por defecto
+
 renderTemples(temples);
 
-// Manejo de navegación
+
 document.querySelectorAll("nav a").forEach(link => {
     link.addEventListener("click", event => {
         event.preventDefault();
