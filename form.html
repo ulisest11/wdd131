@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Review</title>
+    <link rel="stylesheet" href="styles/form.css" />
+</head>
+
+<body>
+    <form action="review.html" method="get">
+        <h1>Product Review</h1>
+
+        <label for="product">Product Name</label>
+        <select id="product" name="product" required>
+            <option value="" disabled selected>Select a Product ...</option>
+        </select>
+
+        <fieldset>
+            <legend>Overall Rating</legend>
+            <label><input type="radio" name="rating" value="1" required> ★</label>
+            <label><input type="radio" name="rating" value="2"> ★★</label>
+            <label><input type="radio" name="rating" value="3"> ★★★</label>
+            <label><input type="radio" name="rating" value="4"> ★★★★</label>
+            <label><input type="radio" name="rating" value="5"> ★★★★★</label>
+        </fieldset>
+
+        <label for="installation">Date of Installation</label>
+        <input type="date" id="installation" name="installation" required>
+
+        <fieldset>
+            <legend>Which features did you find useful in the product?<br><small>(Check all that apply)</small></legend>
+            <label><input type="checkbox" id="durability" name="features" value="Durability"> Durability</label><br>
+            <label><input type="checkbox" id="ease" name="features" value="Ease of Use"> Ease of Use</label><br>
+            <label><input type="checkbox" id="performance" name="features" value="Performance"> Performance</label><br>
+            <label><input type="checkbox" id="design" name="features" value="Design"> Design</label>
+        </fieldset>
+
+        <label for="review">Written Review <small>(Optional)</small></label>
+        <textarea id="review" name="review" rows="4" cols="30"></textarea>
+
+        <label for="username">Your Name <small>(Optional)</small></label>
+        <input type="text" id="username" name="username">
+
+        <input type="submit" value="Post Review">
+    </form>
+
+    <footer>
+        <p>©2025 🌵 Ulises Antonio Tzaj 🌵 Guatemala</p>
+        <p>Last Updated: <span id="last-updated"></span></p>
+    </footer>
+
+    <script src="scripts/form.js"></script>
+</body>
+
+</html>

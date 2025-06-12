@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2ecf4;
+    margin: 0;
+    padding: 20px;
+    color: #222;
+}
+
+form {
+    background: #d9cfe4;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    color: #2c003e;
+}
+
+label,
+fieldset,
+textarea,
+input[type="text"],
+input[type="date"],
+select {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #4c2d66;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #361d4d;
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 0.9em;
+    color: #444;
+}
+
+.confirmation {
+    text-align: center;
+    margin-top: 50px;
+}
+
+@media (max-width: 600px) {
+    form {
+        padding: 10px;
+    }
+}
