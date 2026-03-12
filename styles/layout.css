@@ -1,0 +1,75 @@
+/* -------- Reset & Fuente -------- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: grid;
+    grid-template-areas:
+        "header"
+        "nav"
+        "main"
+        "footer";
+    grid-template-rows: auto auto 1fr auto;
+    min-height: 100vh;
+}
+
+/* -------- Header -------- */
+header {
+    grid-area: header;
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+}
+
+/* -------- NAV (Flexbox) -------- */
+nav {
+    grid-area: nav;
+    background-color: #000;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0.5rem 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem;
+}
+
+/* -------- Main content (Grid interno) -------- */
+main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1rem;
+    background-color: #ccc;
+    padding: 1rem;
+}
+
+.main-content {
+    background-color: #ddd;
+    padding: 1rem;
+}
+
+.aside-content {
+    background-color: #fff;
+    padding: 1rem;
+}
+
+/* -------- Footer -------- */
+footer {
+    grid-area: footer;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
