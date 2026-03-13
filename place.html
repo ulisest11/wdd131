@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petén, Guatemala</title>
+    <meta name="author" content="Ulises Tzaj">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Petén</h1>
+    </header>
+
+    <main>
+
+        <div class="hero-container">
+            <picture class="hero-image">
+                <source media="(min-width: 768px)" srcset="images/peten-desktop.webp">
+                <source media="(max-width: 767px)" srcset="images/peten-mobile.webp">
+                <img src="images/peten-desktop.webp" alt="Peten View, Guatemala">
+            </picture>
+
+            <div class="data-box">
+                <h2>Data</h2>
+                <div class="data-content">
+                    <p><strong>Area:</strong> 35,854 sq km</p>
+                    <p><strong>Population:</strong> 595,548</p>
+                    <p><strong>Capital:</strong> Flores</p>
+                    <p><strong>Languages:</strong> Spanish, Itza'</p>
+                    <p><strong>Currency:</strong> Guatemalan Quetzal</p>
+                    <p><strong>Time Zone:</strong> UTC-6</p>
+                    <p><strong>Calling Code:</strong> +502</p>
+                    <p><strong>Internet TLD:</strong> .gt</p>
+                </div>
+            </div>
+
+            <div class="weather-box">
+                <h2>Weather ⛅</h2>
+                <div class="weather-content">
+                    <p><strong>Temperature:</strong> <span id="temperature">28</span> °C</p>
+                    <p><strong>Conditions:</strong> Partly Cloudy</p>
+                    <p><strong>Wind:</strong> <span id="wind-speed">12</span> km/h</p>
+                    <p><strong>Wind Chill:</strong> <span id="wind-chill">N/A</span></p>
+                </div>
+                <img src="images/weather.svg" alt="Icono Weather" class="mobile-weather-icon">
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>©<span id="year"></span> 🌴 Ulises Tzaj 🌴 Guatemala</p>
+        <p id="last-modified"></p>
+    </footer>
+</body>
+
+</html>
