@@ -93,6 +93,11 @@ footer {
     padding: 1rem;
     margin-top: 0;
 }
+footer::after {
+    content: "";
+    display: block;
+    clear: both;
+}
 
 
 @media (max-width: 767px) {
