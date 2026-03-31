@@ -4,13 +4,20 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Submit a product review for our store. Rate your product, share your experience, and help other customers make informed decisions." />
+    <meta name="author" content="Ulises Antonio Tzaj" />
     <title>Product Review</title>
     <link rel="stylesheet" href="styles/form.css" />
+    <script src="scripts/form.js" defer></script>
 </head>
 
 <body>
-    <form action="review.html" method="get">
+    <header>
         <h1>Product Review</h1>
+    </header>
+
+    <form action="review.html" method="get">
 
         <label for="product">Product Name</label>
         <select id="product" name="product" required>
@@ -20,14 +27,13 @@
         <fieldset>
             <legend>Overall Rating</legend>
             <div class="rating-options">
-                <label><input type="radio" name="rating" value="1" required> ★</label>
-                <label><input type="radio" name="rating" value="2"> ★★</label>
-                <label><input type="radio" name="rating" value="3"> ★★★</label>
-                <label><input type="radio" name="rating" value="4"> ★★★★</label>
-                <label><input type="radio" name="rating" value="5"> ★★★★★</label>
+                <label for="rating-1"><input type="radio" id="rating-1" name="rating" value="1" required> ★</label>
+                <label for="rating-2"><input type="radio" id="rating-2" name="rating" value="2" required> ★★</label>
+                <label for="rating-3"><input type="radio" id="rating-3" name="rating" value="3" required> ★★★</label>
+                <label for="rating-4"><input type="radio" id="rating-4" name="rating" value="4" required> ★★★★</label>
+                <label for="rating-5"><input type="radio" id="rating-5" name="rating" value="5" required> ★★★★★</label>
             </div>
         </fieldset>
-        
 
         <label for="installation">Date of Installation</label>
         <input type="date" id="installation" name="installation" required>
@@ -35,10 +41,13 @@
         <fieldset>
             <legend>Which features did you find useful in the product?<br><small>(Check all that apply)</small></legend>
             <div class="features-options">
-                <label><input type="checkbox" id="durability" name="features" value="Durability"> Durability</label>
-                <label><input type="checkbox" id="ease" name="features" value="Ease of Use"> Ease of Use</label>
-                <label><input type="checkbox" id="performance" name="features" value="Performance"> Performance</label>
-                <label><input type="checkbox" id="design" name="features" value="Design"> Design</label>
+                <label for="durability"><input type="checkbox" id="durability" name="features" value="Durability">
+                    Durability</label>
+                <label for="ease"><input type="checkbox" id="ease" name="features" value="Ease of Use"> Ease of
+                    Use</label>
+                <label for="performance"><input type="checkbox" id="performance" name="features" value="Performance">
+                    Performance</label>
+                <label for="design"><input type="checkbox" id="design" name="features" value="Design"> Design</label>
             </div>
         </fieldset>
 
@@ -56,7 +65,7 @@
         <p>Last Updated: <span id="last-updated"></span></p>
     </footer>
 
-    <script src="scripts/form.js"></script>
+    <script src="scripts/form.js" defer></script>
 </body>
 
 </html>
